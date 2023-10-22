@@ -47,7 +47,7 @@ public class ActPrincipalPruebas extends AppCompatActivity implements
     BottomNavigationView bottomNavigationView;
     FragmentManager fragmentManager;
     Toolbar toolbar;
-    FloatingActionButton fab;
+    //FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +101,7 @@ public class ActPrincipalPruebas extends AppCompatActivity implements
 
 
     private void AsignarReferencias(){
-        fab = findViewById(R.id.fab);
+        //fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -145,11 +145,11 @@ public class ActPrincipalPruebas extends AppCompatActivity implements
         fragmentManager = getSupportFragmentManager();
         openFragment(new HomeMuestraFragment());
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(ActPrincipalPruebas.this, R.string.EMPRESA, Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 }

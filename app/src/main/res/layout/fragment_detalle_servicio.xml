@@ -140,15 +140,15 @@
 
                             android:background="@drawable/verde_btn_background"
                             android:drawableStart="@drawable/baseline_shopping_cart_24"
+                            android:drawableLeft="@drawable/baseline_shopping_cart_24"
                             android:drawablePadding="5dp"
                             android:elevation="3dp"
                             android:gravity="center"
                             android:padding="8dp"
-                            android:text="Adquirir un servicio"
+                            android:text="Adquirir el servicio"
                             android:textColor="#ffffff"
                             android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:drawableLeft="@drawable/baseline_shopping_cart_24" />
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

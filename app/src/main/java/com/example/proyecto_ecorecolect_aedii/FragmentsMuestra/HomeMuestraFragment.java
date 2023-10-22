@@ -109,10 +109,10 @@ public class HomeMuestraFragment extends Fragment {
 
         java.util.Date date = new java.util.Date();
         ListaServicios = new ArrayList<>();
-        ListaServicios.add(new Servicios("Servicio de eliminación de basura","servicio_basura","Reduciremos significativamente los residuos recolectados durante el proceso",15.0,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
-        ListaServicios.add(new Servicios("Servicio de control de plagas","dinero","Reduciremos el crecimiento de animales con enfermedades, insectos, etc.",15.0,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
-        ListaServicios.add(new Servicios("Servicio de Recolección de Residuos","servicio_recoleccion_residuos","Podremos recolectar todo tipo de residuos",15.0,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
-        ListaServicios.add(new Servicios("Servicio de Reutilización de Residuos","destruccion","Somos capaces de organizar y darle una segunda vida a ciertos desechos",15.0,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
+        ListaServicios.add(new Servicios("Servicio de eliminación de basura","servicio_basura","Reduciremos significativamente los residuos recolectados durante el proceso",500.0,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
+        ListaServicios.add(new Servicios("Servicio de control de plagas","dinero","Reduciremos el crecimiento de animales con enfermedades, insectos, etc.",1200.95,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
+        ListaServicios.add(new Servicios("Servicio de Recolección de Residuos","servicio_recoleccion_residuos","Podremos recolectar todo tipo de residuos",300.0,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
+        ListaServicios.add(new Servicios("Servicio de Reutilización de Residuos","destruccion","Somos capaces de organizar y darle una segunda vida a ciertos desechos",450.0,obtenerFechaEspecifica(2023,05,12),new Date(date.getTime())));
 
 
         adapter = new ServiciosAdapter(ListaServicios, getContext());

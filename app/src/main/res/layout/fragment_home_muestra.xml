@@ -139,10 +139,10 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:background="#ECEBE6"
                     android:id="@+id/view4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#ECEBE6"
                     android:clipToPadding="false"
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp" />

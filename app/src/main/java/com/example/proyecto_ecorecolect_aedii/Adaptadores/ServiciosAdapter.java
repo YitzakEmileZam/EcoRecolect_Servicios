@@ -17,7 +17,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.proyecto_ecorecolect_aedii.Entidades.Cliente;
 import com.example.proyecto_ecorecolect_aedii.Entidades.Servicios;
 import com.example.proyecto_ecorecolect_aedii.FragmentsMuestra.DetalleServicioFragment;
 import com.example.proyecto_ecorecolect_aedii.R;

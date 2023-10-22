@@ -38,12 +38,12 @@ public class FragmentListaDesarrollador extends Fragment {
 
         lstDesarrollador = getView().findViewById(R.id.lstDesarrollador);
         listaDesarrolladores = new ArrayList<>();
-        listaDesarrolladores.add(new Desarrolladores("99887766",R.drawable.carrusel_1 ,"Michael","Gustavo","Orihuela ","michaelorihuela00@gmail.com","965 275 078","MASCULINO","Ingeniería de Computación y Sistemas"));
-        listaDesarrolladores.add(new Desarrolladores("99887765",R.drawable.logo_empresa_ecorecolect_1,"Renzo Marlon","Huamán","Melgar","renzo_huaman2@usmp.pe","974 658 992","MASCULINO","Ingeniería de Computación y Sistemas"));
-        listaDesarrolladores.add(new Desarrolladores("99887764",R.drawable.carrusel_2,"Bryan Arnold","Valdivia","Pillaca","bryan2910arnold@gmail.com","958 526 643","MASCULINO","Ingeniería de Computación y Sistemas"));
-        listaDesarrolladores.add(new Desarrolladores("99887763",R.drawable.logo_empresa_ecorecolect_1,"Mathías Marcelo","Cueto","Escobar","mathias_cueto@usmp.pe","973 597 929","MASCULINO","Ingeniería de Computación y Sistemas"));
-        listaDesarrolladores.add(new Desarrolladores("99887762",R.drawable.carrusel_3,"Thaine Alexander","Alarcon","Segovia","thaine_alarcon@usmp.pe","963 481 267","MASCULINO","Ingeniería de Computación y Sistemas"));
-        listaDesarrolladores.add(new Desarrolladores("99887761",R.drawable.logo_empresa_ecorecolect_1,"Yitzak Emile","Zamudio","Pacheco","yitzak_zamudio@usmp.pe","926 635 137","MASCULINO","Ingeniería de Computación y Sistemas"));
+        listaDesarrolladores.add(new Desarrolladores("99887766",R.drawable.michael ,"Michael","Gustavo","Orihuela ","michaelorihuela00@gmail.com","965 275 078","MASCULINO","Ingeniería de Computación y Sistemas"));
+        listaDesarrolladores.add(new Desarrolladores("99887765",R.drawable.renzo,"Renzo Marlon","Huamán","Melgar","renzo_huaman2@usmp.pe","974 658 992","MASCULINO","Ingeniería de Computación y Sistemas"));
+        listaDesarrolladores.add(new Desarrolladores("99887764",R.drawable.bryan,"Bryan Arnold","Valdivia","Pillaca","bryan2910arnold@gmail.com","958 526 643","MASCULINO","Ingeniería de Computación y Sistemas"));
+        listaDesarrolladores.add(new Desarrolladores("99887763",R.drawable.pacha,"Mathías Marcelo","Cueto","Escobar","mathias_cueto@usmp.pe","973 597 929","MASCULINO","Ingeniería de Computación y Sistemas"));
+        listaDesarrolladores.add(new Desarrolladores("99887762",R.drawable.thaine,"Thaine Alexander","Alarcon","Segovia","thaine_alarcon@usmp.pe","963 481 267","MASCULINO","Ingeniería de Computación y Sistemas"));
+        listaDesarrolladores.add(new Desarrolladores("99887761",R.drawable.emile,"Yitzak Emile","Zamudio","Pacheco","yitzak_zamudio@usmp.pe","926 635 137","MASCULINO","Ingeniería de Computación y Sistemas"));
 
         ArrayList<String> nombres = new ArrayList<>();
         for(Desarrolladores p:listaDesarrolladores){

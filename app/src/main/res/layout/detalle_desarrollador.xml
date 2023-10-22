@@ -150,7 +150,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:orientation="vertical">
 
             <TextView
@@ -158,10 +158,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:textStyle="bold"
                 android:text="Ingenieria de Computación y Sistemas            "
-                android:layout_marginLeft="15dp" />
+                android:textStyle="bold" />
         </LinearLayout>
 
 
