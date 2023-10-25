@@ -1,5 +1,8 @@
 package com.example.proyecto_ecorecolect_aedii.FragmentsMuestra;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +16,9 @@ import android.view.ViewGroup;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.proyecto_ecorecolect_aedii.Actividades.ActListarCompra;
+import com.example.proyecto_ecorecolect_aedii.Actividades.ActRegistrar;
+import com.example.proyecto_ecorecolect_aedii.Actividades.Compra;
 import com.example.proyecto_ecorecolect_aedii.Adaptadores.ServiciosAdapter;
 import com.example.proyecto_ecorecolect_aedii.Entidades.Servicios;
 import com.example.proyecto_ecorecolect_aedii.R;
@@ -30,6 +36,8 @@ import java.util.Calendar;
  * create an instance of this fragment.
  */
 public class HomeMuestraFragment extends Fragment {
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,6 +76,7 @@ public class HomeMuestraFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //recuperarData();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -140,4 +149,5 @@ public class HomeMuestraFragment extends Fragment {
         // Devolver la fecha especificada
         return fechaEspecifica;
     }
+
 }

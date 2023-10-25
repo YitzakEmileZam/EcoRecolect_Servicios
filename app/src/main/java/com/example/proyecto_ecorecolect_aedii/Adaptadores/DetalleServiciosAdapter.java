@@ -2,10 +2,12 @@ package com.example.proyecto_ecorecolect_aedii.Adaptadores;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.proyecto_ecorecolect_aedii.Actividades.ActRegistrar;
 import com.example.proyecto_ecorecolect_aedii.Entidades.Servicios;
 import com.example.proyecto_ecorecolect_aedii.FragmentsMuestra.DetalleServicioFragment;
 import com.example.proyecto_ecorecolect_aedii.R;
@@ -72,6 +75,14 @@ public class DetalleServiciosAdapter extends RecyclerView.Adapter<DetalleServici
             }
         });
 
+        /*holder.btnRedirect.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent=new Intent(context, ActRegistrar.class);
+                context.startActivity(intent);
+            }
+        });*/
+
     }
 
     @Override
@@ -82,12 +93,15 @@ public class DetalleServiciosAdapter extends RecyclerView.Adapter<DetalleServici
         ImageView imagen;
         ImageView addBtn2;
 
+        //Button btnRedirect;
+
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             nombre = itemView.findViewById(R.id.title);
             imagen = itemView.findViewById(R.id.pic);
             precio = itemView.findViewById(R.id.fee);
             addBtn2 = itemView.findViewById(R.id.addBtn2);
+            //btnRedirect= itemView.findViewById(R.id.btnRedirect);
         }
     }
 

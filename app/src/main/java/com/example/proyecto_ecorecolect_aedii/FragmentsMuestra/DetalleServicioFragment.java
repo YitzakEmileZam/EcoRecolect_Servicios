@@ -106,8 +106,8 @@ public class DetalleServicioFragment extends Fragment {
         addToRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //successMessage("Adquiriste un buen plan, felicidades!!!");
-                warningMessage("Porfavor inicie sesión con su cuenta de EcoRecolect!!!");
+                successMessage("Adquiriste un buen plan, felicidades!!!");
+                //warningMessage("Porfavor inicie sesión con su cuenta de EcoRecolect!!!");
             }
         });
     }

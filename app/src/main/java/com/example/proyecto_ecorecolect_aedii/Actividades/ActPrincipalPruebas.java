@@ -1,6 +1,8 @@
 package com.example.proyecto_ecorecolect_aedii.Actividades;
 
+import android.app.Activity;
 import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -24,6 +27,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.proyecto_ecorecolect_aedii.Desarrolladores.ActPrincipalDesarrolladores;
+import com.example.proyecto_ecorecolect_aedii.Entidades.Servicios;
 import com.example.proyecto_ecorecolect_aedii.FragmentsMuestra.HomeMuestraFragment;
 import com.example.proyecto_ecorecolect_aedii.FragmentsMuestra.MisionMuestraFragment;
 import com.example.proyecto_ecorecolect_aedii.FragmentsMuestra.NosotrosMuestraFragment;
@@ -39,21 +43,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class ActPrincipalPruebas extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
-
+    ArrayList<Compra> listaCompras;
     DrawerLayout drawer_layout;
     BottomNavigationView bottomNavigationView;
     FragmentManager fragmentManager;
     Toolbar toolbar;
     //FloatingActionButton fab;
 
+    Button btnReg, btnLis;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AsignarReferencias();
+        recuperarData();
+
 
 
         //String recipient = "ecoRecolect@outlook.com";
@@ -101,6 +111,10 @@ public class ActPrincipalPruebas extends AppCompatActivity implements
 
 
     private void AsignarReferencias(){
+        //btnRegistrarP
+        //btnListarP
+        btnReg = findViewById(R.id.btnRegistrarP);
+        btnLis = findViewById(R.id.btnListarP);
         //fab = findViewById(R.id.fab);
         toolbar = findViewById(R.id.toolbar);
 
@@ -145,11 +159,86 @@ public class ActPrincipalPruebas extends AppCompatActivity implements
         fragmentManager = getSupportFragmentManager();
         openFragment(new HomeMuestraFragment());
 
+        //llevar al detalle de la compra
         /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ActPrincipalPruebas.this, R.string.EMPRESA, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ActPrincipalPruebas.this, R.string.EMPRESA, Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(this, ActRegistrarCliente.class);
+                //startActivity(intent);
             }
         });*/
+
+        /*fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ActPrincipalPruebas.this, ActListarCompra.class);
+                startActivity(intent);
+            }
+        });*/
+
     }
+
+    public void registrarPr(View view){
+        Intent intent=new Intent(this, ActRegistrar.class);
+        Bundle bundle= new Bundle();
+        bundle.putSerializable("data",listaCompras);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+        //context sirve para acceder a a los recursos de la app y
+        // el getContext es para devolver el contexto de una fragment adjuntada a un actividad
+        /*Context context= getContext();
+        if (context != null){
+            Intent intent=new Intent(context, ActRegistrar.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("data",listaCompras);
+            intent.putExtras(bundle);
+            context.startActivity(intent);
+        }*/
+    }
+
+    public void listarPr(View view){
+        Intent intent = new Intent(this, ActListarCompra.class);
+        Bundle bundle= new Bundle();
+        bundle.putSerializable("data",listaCompras);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+        //usar en fragment
+        /*Context context = getContext();
+        if (context != null){
+            Intent intent = new Intent(context, ActListarCompra.class);
+            //bundle es un contenedor para pasar datos de un activity a otro y fragment a otro
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("data",listaCompras);
+            intent.putExtras(bundle);
+            context.startActivity(intent);
+        }*/
+
+    }
+
+    private void recuperarData() {
+
+        Bundle bundle= getIntent().getExtras();
+        if (bundle==null){
+            listaCompras=new ArrayList<>();
+        }else{
+            listaCompras= (ArrayList<Compra>) bundle.getSerializable("data");
+        }
+
+        //ActRegistrar activity = getActivity();
+        /*Activity activity= getActivity();
+        if(activity !=null){
+            Bundle bundle = activity.getIntent().getExtras();
+            if (bundle == null){
+                listaCompras = new ArrayList<>();
+            }else{
+                listaCompras=(ArrayList<Compra>) bundle.getSerializable("data");
+            }
+        }*/
+
+    }
+
+
 }

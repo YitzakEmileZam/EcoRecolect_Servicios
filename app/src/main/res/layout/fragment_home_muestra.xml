@@ -147,6 +147,26 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp" />
 
+                <Button
+                    android:id="@+id/btnRegistrarP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:onClick="registrarPr"
+                    android:text="REGISTRAR SERVICIO"
+                    app:backgroundTint="#77D816"
+                    />
+
+                <Button
+                    android:id="@+id/btnListarP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="91dp"
+                    android:onClick="listarPr"
+                    android:text="LISTAR SERVICIO"
+                    app:backgroundTint="#77D816" />
+
+
             </LinearLayout>
         </ScrollView>
 
